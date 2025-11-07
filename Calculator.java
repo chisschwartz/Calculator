@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Calculator {
 
@@ -17,18 +18,22 @@ public class Calculator {
                     int amount = myObj.nextInt();
 
                     for (int i = 0; i < amount; i++) {
+                        ArrayList<Integer> storage = new ArrayList<Integer>();
                         System.out.println("Enter number " + (i + 1));
-                        //store values into an array? add that way?
                         //For each loop?
-                        int[] value = {myObj.nextInt()};
-                        System.out.println(value[i] + value[i]);
-                    }
+                        int value = myObj.nextInt();
+                        storage.add(value);
 
-//                    System.out.println("Enter 1st number");
-//                    int firstValue = myObj.nextInt();
-//                    System.out.println("Enter 2nd number");
-//                    int secValue = myObj.nextInt();
-//                    System.out.println(firstValue + secValue);
+                        for (int num : storage) {
+                            int total = 0;
+
+                            int currentNum = num;
+
+                            Math.max(total, currentNum);
+
+                            System.out.println(currentNum);
+                        }
+                    }
                 }
 
                 if (choice == 2) {
