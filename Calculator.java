@@ -8,15 +8,25 @@ public class Calculator {
             int initial = myObj.nextInt();
 
             if (initial == 1) {
-                System.out.println("Pick a function: 1, Add 2. Subtract 3. Multiply 4. Divide");
+                System.out.println("Pick a function: 1. Add 2. Subtract 3. Multiply 4. Divide");
                 int choice = myObj.nextInt();
 
                 if (choice == 1) {
-                    System.out.println("Enter 1st number");
-                    int firstValue = myObj.nextInt();
-                    System.out.println("Enter 2nd number");
-                    int secValue = myObj.nextInt();
-                    System.out.println(firstValue + secValue);
+
+                    System.out.println("How many numbers to add?");
+                    int amount = myObj.nextInt();
+
+                    for (int i = 0; i < amount; i++) {
+                        System.out.println("Enter 1st number");
+                        int value = myObj.nextInt();
+                        System.out.println(value);
+                    }
+
+//                    System.out.println("Enter 1st number");
+//                    int firstValue = myObj.nextInt();
+//                    System.out.println("Enter 2nd number");
+//                    int secValue = myObj.nextInt();
+//                    System.out.println(firstValue + secValue);
                 }
 
                 if (choice == 2) {
@@ -42,11 +52,10 @@ public class Calculator {
                     int secValue = myObj.nextInt();
                     System.out.println(firstValue / secValue);
                 }
-
             }
 
             if (initial == 2) {
-                System.out.println("Pick a function: 1, Square 2. Squareroot 3. Cubed");
+                System.out.println("Pick a function: 1. Square 2. Squareroot 3. Cubed");
                 int choice = myObj.nextInt();
 
                 if (choice == 1) {
