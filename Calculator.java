@@ -17,9 +17,11 @@ public class Calculator {
                     int amount = myObj.nextInt();
 
                     for (int i = 0; i < amount; i++) {
-                        System.out.println("Enter 1st number");
-                        int value = myObj.nextInt();
-                        System.out.println(value);
+                        System.out.println("Enter number " + (i + 1));
+                        //store values into an array? add that way?
+                        //For each loop?
+                        int[] value = {myObj.nextInt()};
+                        System.out.println(value[i] + value[i]);
                     }
 
 //                    System.out.println("Enter 1st number");
