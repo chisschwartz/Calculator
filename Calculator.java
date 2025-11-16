@@ -1,10 +1,15 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 
+
+
 public class Calculator {
 
-        public static void main(String[] args) {
-            Scanner myObj = new Scanner(System.in);
+    static Scanner myObj = new Scanner(System.in);
+
+    public static void main(String[] args) {
+//            Scanner myObj = new Scanner(System.in);
+
             System.out.println("What functions would you like: 1. Basic 2. Advanced");
             int initial = myObj.nextInt();
 
@@ -18,21 +23,30 @@ public class Calculator {
                     int amount = myObj.nextInt();
 
                     for (int i = 0; i < amount; i++) {
-                        ArrayList<Integer> storage = new ArrayList<Integer>();
+//                        int total = 0;
+
+                        ArrayList<Integer> storage = new ArrayList<>();
                         System.out.println("Enter number " + (i + 1));
-                        //For each loop?
                         int value = myObj.nextInt();
                         storage.add(value);
+//                        total = Math.max(total, storage.get(i) + total);
+
+//                        System.out.println(storage.get(i));
 
                         for (int num : storage) {
-                            int total = 0;
 
-                            int currentNum = num;
+                            ArrayList<Integer> addingUp = new ArrayList<>();
 
-                            Math.max(total, currentNum);
+                            int currentNum = 0;
 
-                            System.out.println(currentNum);
+                            int total = currentNum + num;
+
+                            addingUp.add(num);
+
+//                            System.out.println(addingUp.get(0));
                         }
+
+                        System.out.println(storage.stream().distinct().count());
                     }
                 }
 
@@ -61,7 +75,9 @@ public class Calculator {
                 }
             }
 
+
             if (initial == 2) {
+
                 System.out.println("Pick a function: 1. Square 2. Squareroot 3. Cubed");
                 int choice = myObj.nextInt();
 
