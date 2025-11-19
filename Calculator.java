@@ -25,7 +25,6 @@ public class Calculator {
                     int total = 0;
 
                     for (int i = 0; i < amount; i++) {
-
                         System.out.println("Enter number " + (i + 1));
                         int value = myObj.nextInt();
                         storage.add(value);
@@ -36,15 +35,31 @@ public class Calculator {
                         total += storage.get(j);
                     }
 
-                    System.out.println("Your totals is: " + total);
+                    System.out.println("Your total is: " + total);
                 }
 
                 if (choice == 2) {
-                    System.out.println("Enter biggest number");
-                    int firstValue = myObj.nextInt();
-                    System.out.println("Enter smallest number");
-                    int secValue = myObj.nextInt();
-                    System.out.println(firstValue - secValue);
+
+                    System.out.println("How many numbers to subtract?");
+                    int amount = myObj.nextInt();
+                    ArrayList<Integer> storage = new ArrayList<>();
+                    int total = 0;
+
+                    for (int i = 0; i < amount; i++) {
+                        System.out.println("Enter number " + (i + 1));
+                        int value = myObj.nextInt();
+                        storage.add(value);
+                        storage.sort((a, b) -> {return -1 * a.compareTo(b);});
+
+                    }
+
+
+                    for (int j = 0; j < storage.size(); j++) {
+
+                        Math.min(total, )
+                    }
+
+                    System.out.println("Your total is: " + total);
                 }
 
                 if (choice == 3) {
