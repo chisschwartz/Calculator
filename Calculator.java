@@ -21,33 +21,22 @@ public class Calculator {
 
                     System.out.println("How many numbers to add?");
                     int amount = myObj.nextInt();
+                    ArrayList<Integer> storage = new ArrayList<>();
+                    int total = 0;
 
                     for (int i = 0; i < amount; i++) {
-//                        int total = 0;
 
-                        ArrayList<Integer> storage = new ArrayList<>();
                         System.out.println("Enter number " + (i + 1));
                         int value = myObj.nextInt();
                         storage.add(value);
-//                        total = Math.max(total, storage.get(i) + total);
 
-//                        System.out.println(storage.get(i));
-
-                        for (int num : storage) {
-
-                            ArrayList<Integer> addingUp = new ArrayList<>();
-
-                            int currentNum = 0;
-
-                            int total = currentNum + num;
-
-                            addingUp.add(num);
-
-//                            System.out.println(addingUp.get(0));
-                        }
-
-                        System.out.println(storage.stream().distinct().count());
                     }
+
+                    for (int j = 0; j < storage.size(); j++) {
+                        total += storage.get(j);
+                    }
+
+                    System.out.println("Your totals is: " + total);
                 }
 
                 if (choice == 2) {
